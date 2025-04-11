@@ -1,0 +1,15 @@
+reset;
+model Port_City.mod;
+data Port_City.dat;
+option solver gurobi; 
+solve;
+
+display Total_Cost;
+
+display {p in PORTS, c in CITIES: Flow[p,c] > 0} Flow[p,c] > "Matrix.csv";
+
+# for {p in PORTS, c in CITIES} {
+#    printf "Flow[%s,%s] = %.1f\n", p, c, Flow[p,c];
+# }
+
+printf {p in PORTS, c in CITIES} "%s,%s,%.1f\n", p, c, Flow[p,c] > "flow_full.csv";

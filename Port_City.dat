@@ -1,0 +1,64 @@
+data;
+
+# Set declarations
+set PORTS := 
+    Kolkata Haldia Paradeep Vizag Chennai Chidambaram 
+    Kochi Mangalore Mormugaon JNPT DeenDayal;
+
+set CITIES := 
+    Guwhathi Srinagar Chandigarh Delhi Rudrapur NaviMumbai 
+    Vijaywada Varanasi Kharagpur Indore Belgaum Bangalore 
+    Rajkot Ahmedabad Ludhiana Rourkela Hyderabad Nagpur 
+    Coimbatore Kolkata;
+
+# Supply data (ports supply)
+param supply := 
+Kolkata     31.6
+Haldia      51
+Paradeep    239
+Vizag       131.1
+Chennai     225
+Chidambaram 331.5
+Kochi       78.9
+Mangalore   98
+Mormugaon   63.4
+JNPT        217.6
+DeenDayal   267.1;
+
+# Demand data (cities demand)
+param demand := 
+Guwhathi    26
+Srinagar    32.1
+Chandigarh  28.6
+Delhi       244.3
+Rudrapur    38
+NaviMumbai  287.7
+Vijaywada   27.7
+Varanasi    32.6
+Kharagpur   21.7
+Indore      54.3
+Belgaum     43.4
+Bangalore   211.7
+Rajkot      38
+Ahmedabad   149.3
+Ludhiana    43.4
+Rourkela    40.2
+Hyderabad   184.8
+Nagpur      65.1
+Coimbatore  43.4
+Kolkata     121.9;
+
+# Distance Table
+param distance:
+         Guwhathi  Srinagar  Chandigarh  Delhi  Rudrapur  NaviMumbai  Vijaywada  Varanasi  Kharagpur  Indore  Belgaum  Bangalore  Rajkot  Ahmedabad  Ludhiana  Rourkela  Hyderabad  Nagpur  Coimbatore  Kolkata :=
+Kolkata  1016     2323      1760        1491   1332      2203        1232      675       137        1562    2045    1896       2162     1956      1823      486      1504      1239    2139      0
+Haldia   1109     1679      1854        1611   1400      2139        1217      771       123        1656    2029    1882       2289     2082      1918      474      1489      1224    2124      119
+Paradeep 1424     1787      1962        1719   99        1859        896       878       348        1357    1707    1560       1973     1768      2026      394      1167      910     1802      451
+Vizag    1859     2059      2012        1768   454       1317        350       1184      787        1216    1221    1014       2036     1847      2085      746      616       767     1265      891
+Chennai  2649     2499      2452        2208   1244      1315        452       1863      1579       1485    863     347        2034     1846      2516      1480     626       1125    507       1683
+Chidambaram 2867 2718      2670        2427   1463      1356        714       2082      1803       1735    903     580        2075     1887      2740      1704     850       1349    381       1907
+Kochi    3300     3014      2966        2723   1895      1519        1096      2377      2221       1898    1067    548        2238     2050      3034      2122     1126      1643    191       2325
+Mangalore 3124   2567      2447        2212   1806      915         1014      2082      2142       1375    441     355        1612     1423      2616      2069     823       1340    417       2246
+Mormugaon 3042   2750      2150        1917   2000      632         1011      1910      2132       1079    141     528        1287     1106      2214      1910     728       1171    776       2234
+JNPT     2733     1754      1347        1447   1501      26          974       1477      1902       761     463     962        736      532      1720      1560     710       938     1211      2202
+DeenDayal 2774   1753      560         1169   1388      827         1800      1635      2291       756     1288    1786       197      298      1293      1899     1515      1168    2036      2307;
